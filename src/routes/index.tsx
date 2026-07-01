@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroEngineer from "@/assets/hero-engineer.jpg";
+
 import projectDisplay from "@/assets/project-display.jpg";
 import projectIot from "@/assets/project-iot.jpg";
 
