@@ -64,6 +64,13 @@ function Index() {
             >
               HUBUNGI SAYA
             </a>
+            <a
+              href="/portfolio.html"
+              download="index.html"
+              className="px-8 py-4 border border-brand-accent/40 text-brand-accent hover:bg-brand-accent/10 font-bold rounded-sm transition-colors text-sm tracking-widest"
+            >
+              DOWNLOAD HTML
+            </a>
           </div>
         </div>
         <div className="relative w-full max-w-sm mx-auto lg:mx-0">
