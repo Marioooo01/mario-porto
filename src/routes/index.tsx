@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import heroPhoto from "@/assets/hero-photo.jpg.asset.json";
+import heroPhoto from "@/assets/hero-cover.jpg.asset.json";
 import projectNetwork from "@/assets/project-network.jpg.asset.json";
 import projectIotAsset from "@/assets/project-iot-real.jpg.asset.json";
 
