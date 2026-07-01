@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mario Quaresma Ferdian — Junior Electronics & Network Engineer</title>
+<meta name="description" content="Portofolio Mario Quaresma Ferdian: Junior Electronics & Network Engineer, IoT Specialist." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0f1a; --border:#1e293b; --accent:#22d3ee; --text:#e2e8f0;
+    --muted:#94a3b8; --dim:#64748b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+  .mono{font-family:'JetBrains Mono',monospace}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .container{max-width:1152px;margin:0 auto;padding:0 24px}
+
+  /* Nav */
+  nav{position:sticky;top:0;z-index:50;background:rgba(10,15,26,.8);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+  .nav-inner{height:64px;display:flex;align-items:center;justify-content:space-between}
+  .logo{font-family:'JetBrains Mono',monospace;color:var(--accent);font-size:14px;letter-spacing:-.02em}
+  .nav-links{display:none;gap:32px;font-family:'JetBrains Mono',monospace;font-size:13px;text-transform:uppercase;letter-spacing:.15em;color:var(--muted)}
+  .nav-links a:hover{color:var(--accent)}
+  @media(min-width:768px){.nav-links{display:flex}}
+
+  /* Hero */
+  .hero{padding:96px 0}
+  .hero-grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:center}
+  @media(min-width:1024px){.hero-grid{grid-template-columns:1fr auto;gap:64px}.hero{padding:128px 0}}
+  .badge{display:inline-block;padding:4px 12px;border-radius:999px;border:1px solid rgba(34,211,238,.2);background:rgba(34,211,238,.05);color:var(--accent);font-size:12px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.15em;margin-bottom:24px}
+  h1{font-size:48px;font-weight:800;color:#fff;line-height:1.1;margin-bottom:24px}
+  @media(min-width:1024px){h1{font-size:72px}}
+  h1 .accent{background:linear-gradient(90deg,var(--accent),#60a5fa);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .lead{font-size:20px;color:var(--muted);font-family:'JetBrains Mono',monospace;margin-bottom:32px}
+  .lead-sep{color:var(--accent)}
+  .desc{color:var(--dim);margin-bottom:40px;max-width:640px}
+  .btns{display:flex;flex-wrap:wrap;gap:16px}
+  .btn{display:inline-block;padding:16px 32px;font-weight:700;font-size:13px;letter-spacing:.15em;border-radius:2px;transition:transform .2s,background .2s;cursor:pointer;border:0}
+  .btn-primary{background:var(--accent);color:var(--bg)}
+  .btn-primary:hover{transform:translateY(-2px)}
+  .btn-outline{border:1px solid var(--border);color:var(--text);background:transparent}
+  .btn-outline:hover{background:rgba(255,255,255,.05)}
+  .hero-photo{position:relative;width:100%;max-width:384px;margin:0 auto}
+  .hero-photo::before{content:'';position:absolute;inset:-8px;background:linear-gradient(135deg,rgba(34,211,238,.3),rgba(59,130,246,.1));filter:blur(32px);border-radius:24px}
+  .hero-photo-inner{position:relative;overflow:hidden;border-radius:16px;border:1px solid var(--border);aspect-ratio:3/4}
+  .hero-photo-inner img{width:100%;height:100%;object-fit:cover}
+
+  /* Sections */
+  section{padding:96px 0}
+  h2{font-size:30px;font-weight:700;color:#fff;margin-bottom:32px}
+  .about{background:rgba(30,41,59,.3);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+  .about-grid{display:grid;grid-template-columns:1fr;gap:48px}
+  @media(min-width:1024px){.about-grid{grid-template-columns:2fr 1fr}}
+  .about p{font-size:18px;color:var(--muted)}
+  .about-side{border-left:1px solid var(--border);padding-left:32px;display:flex;flex-direction:column;gap:24px}
+  .about-side h4{color:var(--accent);font-family:'JetBrains Mono',monospace;font-size:12px;text-transform:uppercase;margin-bottom:8px}
+  .about-side p{color:#fff;font-size:16px}
+
+  /* Skills */
+  h2.center{text-align:center;margin-bottom:64px}
+  .skills-grid{display:grid;grid-template-columns:1fr;gap:24px}
+  @media(min-width:768px){.skills-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:1024px){.skills-grid{grid-template-columns:repeat(3,1fr)}}
+  .skill-card{padding:32px;background:rgba(15,23,42,.5);border:1px solid var(--border);border-radius:12px;transition:border-color .2s}
+  .skill-card:hover{border-color:rgba(34,211,238,.4)}
+  .skill-num{width:40px;height:40px;background:rgba(34,211,238,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--accent);font-family:'JetBrains Mono',monospace;font-size:14px;margin-bottom:24px}
+  .skill-card h3{font-size:20px;font-weight:700;color:#fff;margin-bottom:16px}
+  .skill-card ul{list-style:none;display:flex;flex-direction:column;gap:12px;font-size:14px;color:var(--muted);font-family:'JetBrains Mono',monospace}
+  .skill-card li{display:flex;align-items:center;gap:8px}
+  .dot{width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0}
+
+  /* Projects */
+  .proj-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px}
+  .proj-head p{color:var(--accent);font-family:'JetBrains Mono',monospace;font-size:14px;text-transform:uppercase}
+  .proj-grid{display:grid;grid-template-columns:1fr;gap:32px}
+  @media(min-width:768px){.proj-grid{grid-template-columns:repeat(2,1fr)}}
+  .proj-card{overflow:hidden;border:1px solid var(--border);border-radius:16px;background:rgba(15,23,42,.3)}
+  .proj-card .img-wrap{width:100%;aspect-ratio:16/9;overflow:hidden}
+  .proj-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+  .proj-card:hover img{transform:scale(1.05)}
+  .proj-body{padding:32px}
+  .proj-org{color:var(--accent);font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:.15em;margin-bottom:8px}
+  .proj-card h3{font-size:24px;font-weight:700;color:#fff;margin-bottom:16px}
+  .proj-desc{color:var(--muted);font-size:14px;margin-bottom:24px}
+  .tags{display:flex;flex-wrap:wrap;gap:8px}
+  .tag{padding:4px 8px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:4px;font-size:10px;color:#cbd5e1;text-transform:uppercase;font-family:'JetBrains Mono',monospace;letter-spacing:.15em}
+
+  /* Education */
+  .edu{border-top:1px solid var(--border)}
+  .edu-grid{display:grid;grid-template-columns:1fr;gap:64px}
+  @media(min-width:1024px){.edu-grid{grid-template-columns:repeat(2,1fr)}}
+  .edu h2{font-size:24px;margin-bottom:32px}
+  .edu-card{padding:24px;border:1px solid var(--border);background:rgba(15,23,42,.2);border-radius:8px;position:relative;overflow:hidden}
+  .edu-num{position:absolute;top:0;right:0;padding:16px;font-family:'JetBrains Mono',monospace;font-size:48px;color:rgba(34,211,238,.1);font-weight:900}
+  .edu-card h3{font-size:18px;font-weight:700;color:#fff;margin-bottom:4px}
+  .edu-sub{color:var(--accent);font-family:'JetBrains Mono',monospace;font-size:14px;margin-bottom:16px}
+  .edu-label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.15em;margin-bottom:8px}
+  .edu-tags{display:flex;flex-wrap:wrap;gap:8px}
+  .edu-tag{font-size:12px;background:#1e293b;padding:4px 12px;border-radius:4px;border:1px solid var(--border);font-family:'JetBrains Mono',monospace}
+  .cert-list{display:flex;flex-direction:column;gap:16px}
+  .cert-card{padding:16px;border:1px solid var(--border);border-radius:8px;transition:border-color .2s}
+  .cert-card:hover{border-color:rgba(34,211,238,.5)}
+  .cert-tag{font-size:12px;color:var(--accent);font-family:'JetBrains Mono',monospace;letter-spacing:.15em;margin-bottom:4px}
+
+  /* Footer */
+  footer{background:#000;padding:80px 0;border-top:1px solid var(--border);text-align:center}
+  .kicker{color:var(--accent);font-family:'JetBrains Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:.3em;margin-bottom:16px}
+  footer h2{font-size:36px;margin-bottom:24px}
+  @media(min-width:768px){footer h2{font-size:48px}}
+  .email{font-size:18px;font-family:'JetBrains Mono',monospace;color:#cbd5e1}
+  .email:hover{color:var(--accent)}
+  .loc{color:var(--dim);margin-top:8px;font-size:14px}
+  .foot-links{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:40px}
+  .foot-link{padding:10px 20px;border:1px solid var(--border);color:#cbd5e1;font-family:'JetBrains Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:.15em;border-radius:2px;transition:all .2s}
+  .foot-link:hover{border-color:var(--accent);color:var(--accent)}
+  .copyright{padding-top:48px;margin-top:48px;border-top:1px solid var(--border);font-size:10px;font-family:'JetBrains Mono',monospace;color:#475569;letter-spacing:.15em;text-transform:uppercase}
+</style>
+</head>
+<body>
+<nav>
+  <div class="container nav-inner">
+    <span class="logo">MQF_ENGINEER_V1.0</span>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="badge">Technical Specialist — Kab. Bogor, Indonesia</div>
+      <h1>Mario Quaresma <span class="accent">Ferdian</span></h1>
+      <p class="lead">Junior Electronics & Network Engineer <span class="lead-sep">|</span> IoT Specialist</p>
+      <p class="desc">Menggabungkan latar belakang Teknik Komputer & Jaringan dengan praktik langsung di bidang elektronika dan IoT — dari perakitan mikrokontroler hingga konfigurasi Mikrotik di lapangan.</p>
+      <div class="btns">
+        <a class="btn btn-primary" href="https://mario-builds-things.lovable.app/files/CV_Mario_Quaresma_Ferdian.pdf" download>DOWNLOAD CV</a>
+        <a class="btn btn-outline" href="#contact">HUBUNGI SAYA</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <div class="hero-photo-inner">
+        <img src="https://mario-builds-things.lovable.app/__l5e/assets-v1/bdfcce09-e1c8-4713-bb05-72471e1d19fc/hero-cover.jpg" alt="Mario Quaresma Ferdian" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="container about-grid">
+    <div>
+      <h2>Professional Summary</h2>
+      <p>Saya adalah seorang teknisi dan praktisi IT yang berfokus pada integrasi jaringan dan sistem elektronika. Memiliki pengalaman nyata dalam merancang, merakit, hingga melakukan instalasi lapangan untuk perangkat elektronik berbasis mikrokontroler. Saya terbiasa melakukan troubleshooting sistem dan selalu mengedepankan efisiensi serta standar kualitas tinggi dalam setiap proses produksi.</p>
+    </div>
+    <div class="about-side">
+      <div><h4>Primary Focus</h4><p>Mikrotik & Arduino Integration</p></div>
+      <div><h4>Interpersonal</h4><p>Analitis, adaptif, komunikasi lintas tim</p></div>
+      <div><h4>Lokasi</h4><p>Kab. Bogor, Jawa Barat</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container">
+    <h2 class="center">Technical Core</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-num">01</div>
+        <h3>Electronics & Automation</h3>
+        <ul>
+          <li><span class="dot"></span>Arduino IDE / Mikrokontroler</li>
+          <li><span class="dot"></span>Teknik Solder Timah (Presisi)</li>
+          <li><span class="dot"></span>Perakitan Elektronika</li>
+          <li><span class="dot"></span>Konsultasi & Desain Perangkat</li>
+          <li><span class="dot"></span>Produksi Display Digital / Running Text</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <div class="skill-num">02</div>
+        <h3>Network Systems</h3>
+        <ul>
+          <li><span class="dot"></span>Mikrotik & Winbox Configuration</li>
+          <li><span class="dot"></span>Konfigurasi Jaringan</li>
+          <li><span class="dot"></span>Fiber Optic Infrastructure</li>
+          <li><span class="dot"></span>VirtualBox / Virtualisasi</li>
+          <li><span class="dot"></span>Administrasi Sistem & Infrastruktur</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <div class="skill-num">03</div>
+        <h3>Field Engineering</h3>
+        <ul>
+          <li><span class="dot"></span>Teknisi Lapangan</li>
+          <li><span class="dot"></span>Instalasi Perangkat</li>
+          <li><span class="dot"></span>Troubleshooting Sistem</li>
+          <li><span class="dot"></span>Maintenance & Perbaikan Berkala</li>
+          <li><span class="dot"></span>Teknologi Layanan Jaringan</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <div class="proj-head">
+      <h2>Key Projects</h2>
+      <p>Portfolio 2023—2026</p>
+    </div>
+    <div class="proj-grid">
+      <article class="proj-card">
+        <div class="img-wrap"><img src="https://mario-builds-things.lovable.app/__l5e/assets-v1/19fd7711-1974-446f-9a23-009de34b62d0/project-pcb.jpg" alt="Produksi PCB" /></div>
+        <div class="proj-body">
+          <div class="proj-org">PT SINAR LASER INDONESIA</div>
+          <h3>Produksi & Instalasi Perangkat Elektronika Digital</h3>
+          <p class="proj-desc">Menerjemahkan kebutuhan klien menjadi desain produk. Perakitan produk presisi (Jam Digital, Running Text) sesuai standar industri, dilanjutkan instalasi lapangan dan maintenance berkala.</p>
+          <div class="tags"><span class="tag">Hardware Design</span><span class="tag">Perakitan</span><span class="tag">Instalasi</span><span class="tag">Maintenance</span></div>
+        </div>
+      </article>
+      <article class="proj-card">
+        <div class="img-wrap"><img src="https://mario-builds-things.lovable.app/__l5e/assets-v1/2e4b1bc7-6710-4151-a3a6-a840a1e3948b/project-iot-school.jpg" alt="IoT Sekolah" /></div>
+        <div class="proj-body">
+          <div class="proj-org">DEVACCTO IT — MENTOR</div>
+          <h3>IoT & Jaringan Komputer Sekolah</h3>
+          <p class="proj-desc">Berperan sebagai mentor IoT untuk peserta. Melakukan pemeliharaan dan troubleshooting jaringan sekolah, serta membimbing pengembangan Sistem Keamanan Berbasis IoT dan Smart Monitoring Arduino.</p>
+          <div class="tags"><span class="tag">IoT Mentor</span><span class="tag">Mikrotik</span><span class="tag">Troubleshooting</span><span class="tag">Arduino</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="edu">
+  <div class="container edu-grid">
+    <div>
+      <h2>Formal Education</h2>
+      <div class="edu-card">
+        <div class="edu-num">85.27</div>
+        <h3>SMK Teknik Komputer dan Jaringan</h3>
+        <div class="edu-sub">Nilai Rata-rata: 85,27 / 100</div>
+        <div class="edu-label">Mata Pelajaran Relevan:</div>
+        <div class="edu-tags">
+          <span class="edu-tag">Internet of Things (IoT)</span>
+          <span class="edu-tag">Administrasi Sistem Jaringan</span>
+          <span class="edu-tag">Infrastruktur Jaringan</span>
+          <span class="edu-tag">Teknologi Layanan Jaringan</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h2>Workshops & Sertifikasi</h2>
+      <div class="cert-list">
+        <div class="cert-card"><div class="cert-tag">CERT_KEAHLIAN</div><div>Sertifikasi Kompetensi Keahlian TKJ (BNSP)</div></div>
+        <div class="cert-card"><div class="cert-tag">WORKSHOP_MIKROTIK</div><div>Workshop Mikrotik Network Administration</div></div>
+        <div class="cert-card"><div class="cert-tag">WORKSHOP_IOT</div><div>Workshop Internet of Things (Arduino & Sensor)</div></div>
+        <div class="cert-card"><div class="cert-tag">WORKSHOP_ELECTRO</div><div>Workshop Perakitan & Solder Elektronika</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="container">
+    <p class="kicker">Let's build something</p>
+    <h2>Hubungi Saya</h2>
+    <a class="email" href="mailto:marioqfer@gmail.com">marioqfer@gmail.com</a>
+    <p class="loc">Kab. Bogor, Jawa Barat, Indonesia</p>
+    <div class="foot-links">
+      <a class="foot-link" href="https://wa.me/6282310721577" target="_blank" rel="noreferrer">WhatsApp</a>
+      <a class="foot-link" href="https://www.linkedin.com/in/mario-quaresma-ferdian-b12bab3b5" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a class="foot-link" href="https://github.com/Marioooo01/MarioQ.github.io" target="_blank" rel="noreferrer">GitHub</a>
+      <a class="foot-link" href="https://mario-builds-things.lovable.app/files/CV_Mario_Quaresma_Ferdian.pdf" download>Download CV</a>
+    </div>
+    <div class="copyright">&copy; 2026 Mario Quaresma Ferdian — Built with Technical Precision</div>
+  </div>
+</footer>
+</body>
+</html>
