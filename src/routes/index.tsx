@@ -157,7 +157,7 @@ function Index() {
         </div>
         <div className="grid md:grid-cols-2 gap-8">
           <ProjectCard
-            image={projectDisplay}
+            image={projectNetwork.url}
             imageAlt="Produksi jam digital dan running text di PT Sinar Laser Indonesia"
             org="PT SINAR LASER INDONESIA"
             title="Produksi & Instalasi Perangkat Elektronika Digital"
@@ -165,7 +165,7 @@ function Index() {
             tags={["Hardware Design", "Perakitan", "Instalasi", "Maintenance"]}
           />
           <ProjectCard
-            image={projectIot}
+            image={projectIotAsset.url}
             imageAlt="Prototipe IoT berbasis Arduino di DEVACCTO IT"
             org="DEVACCTO IT — MENTOR"
             title="IoT & Jaringan Komputer Sekolah"
