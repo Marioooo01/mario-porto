@@ -32,53 +32,39 @@ function Index() {
       </nav>
 
       {/* Hero */}
-      <section className="max-w-6xl mx-auto px-6 py-20 lg:py-32 grid lg:grid-cols-2 gap-12 items-center">
-        <div>
-          <div className="inline-block px-3 py-1 rounded-full border border-brand-accent/20 bg-brand-accent/5 text-brand-accent text-xs font-mono mb-6 uppercase tracking-widest">
-            Technical Specialist
-          </div>
-          <h1 className="text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
-            Mario Quaresma{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-blue-400">
-              Ferdian
-            </span>
-          </h1>
-          <p className="text-xl text-slate-400 font-mono mb-8">
-            Junior Electronics & Network Engineer <span className="text-brand-accent">|</span> IoT Specialist
-          </p>
-          <p className="text-slate-500 mb-10 max-w-lg leading-relaxed">
-            Menggabungkan latar belakang Teknik Komputer & Jaringan dengan praktik langsung di bidang elektronika dan IoT — dari perakitan mikrokontroler hingga konfigurasi Mikrotik di lapangan.
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <a
-              href={CV_URL}
-              download
-              className="px-8 py-4 bg-brand-accent text-brand-bg font-bold rounded-sm hover:-translate-y-0.5 transition-transform text-sm tracking-widest"
-            >
-              DOWNLOAD CV
-            </a>
-            <a
-              href="#contact"
-              className="px-8 py-4 border border-brand-border hover:bg-white/5 font-bold rounded-sm transition-colors text-sm tracking-widest"
-            >
-              HUBUNGI SAYA
-            </a>
-          </div>
+      <section className="max-w-4xl mx-auto px-6 py-24 lg:py-40">
+        <div className="inline-block px-3 py-1 rounded-full border border-brand-accent/20 bg-brand-accent/5 text-brand-accent text-xs font-mono mb-6 uppercase tracking-widest">
+          Technical Specialist — Kab. Bogor, Indonesia
         </div>
-        <div className="relative">
-          <img
-            src={heroEngineer}
-            alt="Mario Quaresma Ferdian sedang merakit komponen elektronika"
-            width={1024}
-            height={1024}
-            className="w-full aspect-square object-cover rounded-2xl outline outline-1 -outline-offset-1 outline-white/5"
-          />
-          <div className="absolute -bottom-6 -left-6 bg-brand-bg border border-brand-border p-6 rounded-lg shadow-2xl">
-            <div className="text-xs font-mono text-brand-accent mb-1">LOC_STATUS</div>
-            <div className="text-sm text-white">Kab. Bogor, Indonesia</div>
-          </div>
+        <h1 className="text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
+          Mario Quaresma{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-blue-400">
+            Ferdian
+          </span>
+        </h1>
+        <p className="text-xl text-slate-400 font-mono mb-8">
+          Junior Electronics & Network Engineer <span className="text-brand-accent">|</span> IoT Specialist
+        </p>
+        <p className="text-slate-500 mb-10 max-w-2xl leading-relaxed">
+          Menggabungkan latar belakang Teknik Komputer & Jaringan dengan praktik langsung di bidang elektronika dan IoT — dari perakitan mikrokontroler hingga konfigurasi Mikrotik di lapangan.
+        </p>
+        <div className="flex flex-wrap gap-4">
+          <a
+            href={CV_URL}
+            download
+            className="px-8 py-4 bg-brand-accent text-brand-bg font-bold rounded-sm hover:-translate-y-0.5 transition-transform text-sm tracking-widest"
+          >
+            DOWNLOAD CV
+          </a>
+          <a
+            href="#contact"
+            className="px-8 py-4 border border-brand-border hover:bg-white/5 font-bold rounded-sm transition-colors text-sm tracking-widest"
+          >
+            HUBUNGI SAYA
+          </a>
         </div>
       </section>
+
 
       {/* About */}
       <section id="about" className="bg-brand-border/30 py-24 border-y border-brand-border">
