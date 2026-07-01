@@ -80,10 +80,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "Mario Quaresma Ferdian — Junior Electronics & Network Engineer" },
       { name: "description", content: "Portofolio Mario Quaresma Ferdian: Junior Electronics & Network Engineer, IoT Specialist. Integrasi jaringan Mikrotik & sistem elektronika berbasis Arduino." },
       { name: "author", content: "Mario Quaresma Ferdian" },
-      { property: "og:title", content: "Mario Quaresma Ferdian — Electronics & Network Engineer" },
-      { property: "og:description", content: "Junior Electronics & Network Engineer | IoT Specialist. Integrasi Mikrotik dan sistem elektronika presisi." },
+      { property: "og:title", content: "Mario Quaresma Ferdian — Junior Electronics & Network Engineer" },
+      { property: "og:description", content: "Portofolio Mario Quaresma Ferdian: Junior Electronics & Network Engineer, IoT Specialist. Integrasi jaringan Mikrotik & sistem elektronika berbasis Arduino." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Mario Quaresma Ferdian — Junior Electronics & Network Engineer" },
+      { name: "twitter:description", content: "Portofolio Mario Quaresma Ferdian: Junior Electronics & Network Engineer, IoT Specialist. Integrasi jaringan Mikrotik & sistem elektronika berbasis Arduino." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/891ffa89-45a3-4f59-853b-0afa47d5dad6/id-preview-497b16c3--da68f94b-07b6-4541-873e-1141d76982dc.lovable.app-1782894076700.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/891ffa89-45a3-4f59-853b-0afa47d5dad6/id-preview-497b16c3--da68f94b-07b6-4541-873e-1141d76982dc.lovable.app-1782894076700.png" },
     ],
     links: [
       {
