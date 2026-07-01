@@ -9,10 +9,10 @@ export const Route = createFileRoute("/")({
 });
 
 const CV_URL = "/files/CV_Mario_Quaresma_Ferdian.pdf";
-const WHATSAPP_URL = "https://wa.me/6285717086134";
+const WHATSAPP_URL = "https://wa.me/6282310721577";
 const EMAIL = "marioqfer@gmail.com";
-const LINKEDIN_URL = "https://www.linkedin.com/in/mario-quaresma-ferdian";
-const GITHUB_URL = "https://github.com/";
+const LINKEDIN_URL = "https://www.linkedin.com/in/mario-quaresma-ferdian-b12bab3b5?utm_source=share_via&utm_content=profile&utm_medium=member_android";
+const GITHUB_URL = "https://github.com/Marioooo01/MarioQ.github.io";
 
 function Index() {
   return (
