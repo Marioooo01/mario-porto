@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import projectDisplay from "@/assets/project-display.jpg";
-import projectIot from "@/assets/project-iot.jpg";
+import heroPhoto from "@/assets/hero-photo.jpg.asset.json";
+import projectNetwork from "@/assets/project-network.jpg.asset.json";
+import projectIotAsset from "@/assets/project-iot-real.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -32,38 +33,52 @@ function Index() {
       </nav>
 
       {/* Hero */}
-      <section className="max-w-4xl mx-auto px-6 py-24 lg:py-40">
-        <div className="inline-block px-3 py-1 rounded-full border border-brand-accent/20 bg-brand-accent/5 text-brand-accent text-xs font-mono mb-6 uppercase tracking-widest">
-          Technical Specialist — Kab. Bogor, Indonesia
+      <section className="max-w-6xl mx-auto px-6 py-24 lg:py-32 grid lg:grid-cols-[1fr_auto] gap-12 lg:gap-16 items-center">
+        <div>
+          <div className="inline-block px-3 py-1 rounded-full border border-brand-accent/20 bg-brand-accent/5 text-brand-accent text-xs font-mono mb-6 uppercase tracking-widest">
+            Technical Specialist — Kab. Bogor, Indonesia
+          </div>
+          <h1 className="text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
+            Mario Quaresma{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-blue-400">
+              Ferdian
+            </span>
+          </h1>
+          <p className="text-xl text-slate-400 font-mono mb-8">
+            Junior Electronics & Network Engineer <span className="text-brand-accent">|</span> IoT Specialist
+          </p>
+          <p className="text-slate-500 mb-10 max-w-2xl leading-relaxed">
+            Menggabungkan latar belakang Teknik Komputer & Jaringan dengan praktik langsung di bidang elektronika dan IoT — dari perakitan mikrokontroler hingga konfigurasi Mikrotik di lapangan.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <a
+              href={CV_URL}
+              download
+              className="px-8 py-4 bg-brand-accent text-brand-bg font-bold rounded-sm hover:-translate-y-0.5 transition-transform text-sm tracking-widest"
+            >
+              DOWNLOAD CV
+            </a>
+            <a
+              href="#contact"
+              className="px-8 py-4 border border-brand-border hover:bg-white/5 font-bold rounded-sm transition-colors text-sm tracking-widest"
+            >
+              HUBUNGI SAYA
+            </a>
+          </div>
         </div>
-        <h1 className="text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
-          Mario Quaresma{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-blue-400">
-            Ferdian
-          </span>
-        </h1>
-        <p className="text-xl text-slate-400 font-mono mb-8">
-          Junior Electronics & Network Engineer <span className="text-brand-accent">|</span> IoT Specialist
-        </p>
-        <p className="text-slate-500 mb-10 max-w-2xl leading-relaxed">
-          Menggabungkan latar belakang Teknik Komputer & Jaringan dengan praktik langsung di bidang elektronika dan IoT — dari perakitan mikrokontroler hingga konfigurasi Mikrotik di lapangan.
-        </p>
-        <div className="flex flex-wrap gap-4">
-          <a
-            href={CV_URL}
-            download
-            className="px-8 py-4 bg-brand-accent text-brand-bg font-bold rounded-sm hover:-translate-y-0.5 transition-transform text-sm tracking-widest"
-          >
-            DOWNLOAD CV
-          </a>
-          <a
-            href="#contact"
-            className="px-8 py-4 border border-brand-border hover:bg-white/5 font-bold rounded-sm transition-colors text-sm tracking-widest"
-          >
-            HUBUNGI SAYA
-          </a>
+        <div className="relative w-full max-w-sm mx-auto lg:mx-0">
+          <div className="absolute -inset-2 bg-gradient-to-br from-brand-accent/30 to-blue-500/10 blur-2xl rounded-2xl" />
+          <div className="relative overflow-hidden rounded-2xl border border-brand-border aspect-[3/4]">
+            <img
+              src={heroPhoto.url}
+              alt="Mario Quaresma Ferdian merakit perangkat elektronika"
+              className="w-full h-full object-cover"
+              loading="eager"
+            />
+          </div>
         </div>
       </section>
+
 
 
       {/* About */}
@@ -142,7 +157,7 @@ function Index() {
         </div>
         <div className="grid md:grid-cols-2 gap-8">
           <ProjectCard
-            image={projectDisplay}
+            image={projectNetwork.url}
             imageAlt="Produksi jam digital dan running text di PT Sinar Laser Indonesia"
             org="PT SINAR LASER INDONESIA"
             title="Produksi & Instalasi Perangkat Elektronika Digital"
@@ -150,7 +165,7 @@ function Index() {
             tags={["Hardware Design", "Perakitan", "Instalasi", "Maintenance"]}
           />
           <ProjectCard
-            image={projectIot}
+            image={projectIotAsset.url}
             imageAlt="Prototipe IoT berbasis Arduino di DEVACCTO IT"
             org="DEVACCTO IT — MENTOR"
             title="IoT & Jaringan Komputer Sekolah"
